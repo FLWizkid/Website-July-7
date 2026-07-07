@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { CheckCircle2, AlertCircle, Mail, Phone, Building2 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
@@ -11,7 +11,6 @@ type FormState = {
   phone: string;
   interest: string;
   message: string;
-  website: string; // honeypot
 };
 
 const interestOptions = [
@@ -31,21 +30,25 @@ const INITIAL: FormState = {
   phone: "",
   interest: "",
   message: "",
-  website: "",
 };
 
 export default function Contact() {
   const [form, setForm] = useState<FormState>(INITIAL);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const formCardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (status === "success" || status === "error") {
+      formCardRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [status]);
 
   const set = (field: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm((f) => ({ ...f, [field]: e.target.value }));
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (form.website) return; // honeypot
-
     setStatus("submitting");
     setErrorMsg(null);
 
@@ -75,13 +78,15 @@ export default function Contact() {
       if (!res.ok || data.error) {
         setStatus("error");
         setErrorMsg(data.error ?? "Something went wrong.");
+        console.error("[contact-form] submission error:", res.status, data);
       } else {
         setStatus("success");
         setForm(INITIAL);
       }
-    } catch {
+    } catch (err) {
       setStatus("error");
       setErrorMsg("Network error — please check your connection and try again.");
+      console.error("[contact-form] network error:", err);
     }
   }
 
@@ -136,7 +141,7 @@ export default function Contact() {
 
           {/* Form */}
           <div className="lg:col-span-3">
-            <div className="rounded-2xl border border-white/10 bg-brand-surface/30 p-8">
+            <div ref={formCardRef} className="rounded-2xl border border-white/10 bg-brand-surface/30 p-8">
               <h2 className="text-xl font-semibold text-white mb-6">Send us a message</h2>
               <p className="text-sm text-brand-muted mb-6">
                 Fill out the form below and we'll get back to you within 1–2 business days.
@@ -151,11 +156,6 @@ export default function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5" noValidate>
-                  {/* Honeypot */}
-                  <div className="sr-only" aria-hidden="true">
-                    <input tabIndex={-1} autoComplete="off" value={form.website} onChange={set("website")} />
-                  </div>
-
                   {status === "error" && (
                     <div className="flex items-start gap-3 rounded-xl border border-red-500/30 bg-red-500/5 p-4">
                       <AlertCircle size={18} className="text-red-400 mt-0.5 shrink-0" />
