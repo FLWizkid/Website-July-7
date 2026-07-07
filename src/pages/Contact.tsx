@@ -13,6 +13,8 @@ type FormState = {
   message: string;
 };
 
+type FieldErrors = Partial<Record<keyof FormState, string>>;
+
 const interestOptions = [
   "Hospital / health system pilot",
   "Academic program pilot",
@@ -32,11 +34,25 @@ const INITIAL: FormState = {
   message: "",
 };
 
+function validate(form: FormState): FieldErrors {
+  const errs: FieldErrors = {};
+  if (!form.name.trim()) errs.name = "Name is required.";
+  if (!form.email.trim()) {
+    errs.email = "Email is required.";
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+    errs.email = "Enter a valid email address.";
+  }
+  if (!form.message.trim()) errs.message = "Message is required.";
+  return errs;
+}
+
 export default function Contact() {
   const [form, setForm] = useState<FormState>(INITIAL);
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const formCardRef = useRef<HTMLDivElement>(null);
+  const firstErrorRef = useRef<HTMLInputElement | HTMLTextAreaElement | null>(null);
 
   useEffect(() => {
     if (status === "success" || status === "error") {
@@ -44,12 +60,26 @@ export default function Contact() {
     }
   }, [status]);
 
-  const set = (field: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
-    setForm((f) => ({ ...f, [field]: e.target.value }));
+  const set = (field: keyof FormState) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+      setForm((f) => ({ ...f, [field]: e.target.value }));
+      if (fieldErrors[field]) {
+        setFieldErrors((fe) => ({ ...fe, [field]: undefined }));
+      }
+    };
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+
+    const errs = validate(form);
+    if (Object.keys(errs).length > 0) {
+      setFieldErrors(errs);
+      formCardRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+
     setStatus("submitting");
+    setFieldErrors({});
     setErrorMsg(null);
 
     try {
@@ -62,13 +92,13 @@ export default function Contact() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            name: form.name,
-            title: form.title || null,
-            organization: form.organization || null,
-            email: form.email,
-            phone: form.phone || null,
+            name: form.name.trim(),
+            title: form.title.trim() || null,
+            organization: form.organization.trim() || null,
+            email: form.email.trim(),
+            phone: form.phone.trim() || null,
             interest: form.interest || null,
-            message: form.message,
+            message: form.message.trim(),
           }),
         },
       );
@@ -151,7 +181,7 @@ export default function Contact() {
                 <div className="flex items-start gap-3 rounded-xl border border-brand-cyan/30 bg-brand-cyan/5 p-5">
                   <CheckCircle2 size={20} className="text-brand-cyan mt-0.5 shrink-0" />
                   <p className="text-brand-ink">
-                    Thanks! We'll be in touch soon.
+                    Thanks! We received your message and will be in touch soon.
                   </p>
                 </div>
               ) : (
@@ -170,18 +200,20 @@ export default function Contact() {
                   )}
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <Field label="Name *" hint="Required">
+                    <Field label="Name *" error={fieldErrors.name}>
                       <input
+                        ref={(el) => {
+                          if (fieldErrors.name && !firstErrorRef.current) firstErrorRef.current = el;
+                        }}
                         type="text"
-                        required
                         autoComplete="name"
                         value={form.name}
                         onChange={set("name")}
-                        className="form-input"
+                        className={`form-input${fieldErrors.name ? " border-red-500/60 focus:border-red-500" : ""}`}
                         placeholder="Your name"
                       />
                     </Field>
-                    <Field label="Title" hint="">
+                    <Field label="Title" error={undefined}>
                       <input
                         type="text"
                         autoComplete="organization-title"
@@ -193,7 +225,7 @@ export default function Contact() {
                     </Field>
                   </div>
 
-                  <Field label="Organization" hint="">
+                  <Field label="Organization" error={undefined}>
                     <input
                       type="text"
                       autoComplete="organization"
@@ -205,18 +237,17 @@ export default function Contact() {
                   </Field>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <Field label="Email *" hint="Required">
+                    <Field label="Email *" error={fieldErrors.email}>
                       <input
                         type="email"
-                        required
                         autoComplete="email"
                         value={form.email}
                         onChange={set("email")}
-                        className="form-input"
+                        className={`form-input${fieldErrors.email ? " border-red-500/60 focus:border-red-500" : ""}`}
                         placeholder="you@organization.com"
                       />
                     </Field>
-                    <Field label="Phone" hint="">
+                    <Field label="Phone" error={undefined}>
                       <input
                         type="tel"
                         autoComplete="tel"
@@ -228,7 +259,7 @@ export default function Contact() {
                     </Field>
                   </div>
 
-                  <Field label="Interested in" hint="">
+                  <Field label="Interested in" error={undefined}>
                     <select value={form.interest} onChange={set("interest")} className="form-input">
                       <option value="">Select an option</option>
                       {interestOptions.map((o) => (
@@ -239,13 +270,12 @@ export default function Contact() {
                     </select>
                   </Field>
 
-                  <Field label="Message *" hint="Required">
+                  <Field label="Message *" error={fieldErrors.message}>
                     <textarea
-                      required
                       rows={5}
                       value={form.message}
                       onChange={set("message")}
-                      className="form-input resize-none"
+                      className={`form-input resize-none${fieldErrors.message ? " border-red-500/60 focus:border-red-500" : ""}`}
                       placeholder="Tell us about your organization, training needs, or questions..."
                       maxLength={5000}
                     />
@@ -268,14 +298,25 @@ export default function Contact() {
   );
 }
 
-function Field({ label, hint, children }: { label: string; hint: string; children: React.ReactNode }) {
+function Field({
+  label,
+  error,
+  children,
+}: {
+  label: string;
+  error?: string;
+  children: React.ReactNode;
+}) {
   return (
     <div>
-      <label className="block text-sm font-medium text-brand-ink mb-1.5">
-        {label}
-        {hint && <span className="sr-only">{hint}</span>}
-      </label>
+      <label className="block text-sm font-medium text-brand-ink mb-1.5">{label}</label>
       {children}
+      {error && (
+        <p className="mt-1.5 text-xs text-red-400 flex items-center gap-1">
+          <AlertCircle size={12} />
+          {error}
+        </p>
+      )}
     </div>
   );
 }
