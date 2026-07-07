@@ -70,7 +70,7 @@ Deno.serve(async (req: Request) => {
         },
         body: JSON.stringify({
           from: "Encountive Contact Form <onboarding@resend.dev>",
-          to: ["info@encountive.com"],
+          to: ["contact@encountive.com"],
           reply_to: email,
           subject: `New contact: ${name}${organization ? ` — ${organization}` : ""}`,
           html: emailBody,
