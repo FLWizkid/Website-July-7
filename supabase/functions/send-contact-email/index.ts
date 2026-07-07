@@ -80,6 +80,10 @@ Deno.serve(async (req: Request) => {
       if (!resendRes.ok) {
         const resendError = await resendRes.text();
         console.error("Resend error:", resendError);
+        return new Response(
+          JSON.stringify({ success: true, emailError: resendError }),
+          { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+        );
       }
     } else {
       console.warn("RESEND_API_KEY not set — email not sent");
