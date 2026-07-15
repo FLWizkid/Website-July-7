@@ -1,7 +1,10 @@
-import { useState, useRef, useEffect } from "react";
-import { CheckCircle2, AlertCircle, Mail, Phone, Building2 } from "lucide-react";
+import { Mail, Phone, Building2 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+
+/* HIDDEN: Form-related imports and logic — uncomment to restore
+import { useState, useRef, useEffect } from "react";
+import { CheckCircle2, AlertCircle } from "lucide-react";
 
 type FormState = {
   name: string;
@@ -45,8 +48,10 @@ function validate(form: FormState): FieldErrors {
   if (!form.message.trim()) errs.message = "Message is required.";
   return errs;
 }
+END HIDDEN */
 
 export default function Contact() {
+  /* HIDDEN: Form state — uncomment to restore
   const [form, setForm] = useState<FormState>(INITIAL);
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -119,6 +124,7 @@ export default function Contact() {
       console.error("[contact-form] network error:", err);
     }
   }
+  END HIDDEN */
 
   return (
     <>
@@ -129,9 +135,9 @@ export default function Contact() {
       />
 
       <Section>
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 gap-12 max-w-2xl mx-auto">
           {/* Info Panel */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="space-y-6">
             <div>
               <h2 className="text-xl font-semibold text-white mb-3">Get in touch</h2>
               <p className="text-brand-muted leading-relaxed">
@@ -169,7 +175,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Form */}
+          {/* HIDDEN: Contact form card — uncomment to restore
           <div className="lg:col-span-3">
             <div ref={formCardRef} className="rounded-2xl border border-white/10 bg-brand-surface/30 p-8">
               <h2 className="text-xl font-semibold text-white mb-6">Send us a message</h2>
@@ -292,12 +298,14 @@ export default function Contact() {
               )}
             </div>
           </div>
+          END HIDDEN */}
         </div>
       </Section>
     </>
   );
 }
 
+/* HIDDEN: Field helper component — uncomment to restore
 function Field({
   label,
   error,
@@ -320,3 +328,4 @@ function Field({
     </div>
   );
 }
+END HIDDEN */
