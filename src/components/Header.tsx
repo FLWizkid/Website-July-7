@@ -23,6 +23,7 @@ const NAV: NavItem[] = [
   { label: "ROI", to: "/roi" },
   { label: "Team", to: "/team" },
   { label: "About", to: "/about" },
+  { label: "Contact", to: "/contact" },
 ];
 
 export default function Header() {
