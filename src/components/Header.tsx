@@ -129,6 +129,9 @@ export default function Header() {
 
         {/* Desktop CTAs */}
         <div className="hidden lg:flex items-center gap-3">
+          <Link to="/catalog" className="btn-ghost text-sm min-h-[44px]">
+            Catalog
+          </Link>
           <a
             href="https://app.encountive.com"
             target="_blank"
@@ -197,6 +200,9 @@ export default function Header() {
             )}
 
             <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-white/10">
+              <Link to="/catalog" className="btn-secondary w-full justify-center min-h-[48px]">
+                Catalog
+              </Link>
               <a
                 href="https://app.encountive.com"
                 target="_blank"
