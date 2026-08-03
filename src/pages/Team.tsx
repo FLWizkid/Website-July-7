@@ -46,9 +46,6 @@ export default function Team() {
         subtitle="Our team combines deep clinical experience with cutting-edge technology to build training solutions that make a real difference."
         actions={
           <>
-            <Link to="/contact" className="btn-primary">
-              Contact/Plan a Pilot <ArrowRight size={16} />
-            </Link>
             <Link to="/about" className="btn-secondary">
               About Encountive
             </Link>

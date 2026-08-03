@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import Logo from "./Logo";
 import { cn } from "@/lib/cn";
 
@@ -137,7 +137,7 @@ export default function Header() {
             Login/Demo
           </a>
           <Link to="/contact" className="btn-primary text-xs lg:text-sm px-4 lg:px-6 min-h-[40px] lg:min-h-[44px]">
-            Contact/Plan a Pilot
+            Contact/Plan a Pilot <ArrowRight size={16} />
           </Link>
         </div>
 

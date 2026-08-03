@@ -35,13 +35,8 @@ export default function About() {
       {/* Hero */}
       <div className="hero-glow pt-20 sm:pt-28 md:pt-32 pb-14 sm:pb-18 md:pb-20">
         <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="w-full flex items-center justify-between gap-4 mb-6">
+          <div className="w-full mb-6">
             <BackButton />
-            <div className="flex flex-wrap gap-3 justify-end">
-              <Link to="/contact" className="btn-primary">
-                Contact/Plan a Pilot <ArrowRight size={16} />
-              </Link>
-            </div>
           </div>
           <p className="eyebrow mb-4">About Encountive</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold leading-tight mb-5">
