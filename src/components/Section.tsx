@@ -32,13 +32,13 @@ export default function Section({
   align = "left",
 }: SectionProps) {
   return (
-    <section id={id} className={cn("py-12 sm:py-16 md:py-20", toneClasses[tone], className)}>
+    <section id={id} className={cn("py-5 sm:py-6 md:py-8", toneClasses[tone], className)}>
       <div className={cn("container-wide mx-auto px-4 sm:px-6 lg:px-8", innerClassName)}>
         {(eyebrow || title || subtitle) && (
-          <div className={cn("mb-8 sm:mb-10 md:mb-12", align === "center" ? "text-center" : "")}>
-            {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
+          <div className={cn("mb-4 sm:mb-5", align === "center" ? "text-center" : "")}>
+            {eyebrow && <p className="eyebrow mb-2">{eyebrow}</p>}
             {title && (
-              <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold leading-tight mb-4">{title}</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold leading-tight mb-3">{title}</h2>
             )}
             {subtitle && (
               <p className={cn("text-brand-muted text-base md:text-lg leading-relaxed")}>

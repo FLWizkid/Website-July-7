@@ -12,10 +12,10 @@ export default function CtaBanner({
   actions,
 }: CtaBannerProps) {
   return (
-    <section className="py-12 sm:py-16 md:py-20">
+    <section className="py-6 sm:py-8 md:py-10">
       <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className="relative rounded-3xl border border-brand-cyan/20 overflow-hidden p-6 sm:p-10 md:p-16 text-center"
+          className="relative rounded-3xl border border-brand-cyan/20 overflow-hidden p-6 sm:p-8 md:p-10 text-center"
           style={{
             background:
               "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(34,211,238,0.12), transparent 70%), linear-gradient(180deg, #131A2E 0%, #0a0f1f 100%)",
