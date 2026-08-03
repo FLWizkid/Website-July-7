@@ -226,29 +226,24 @@ export default function Home() {
           See how our AI-adaptive engine coaches learners through realistic scenarios, identifies knowledge gaps in real
           time, and delivers measurable outcomes your institution can defend — all with the rigor clinical teams demand.
         </p>
-        <div className="flex justify-center mb-8">
+        <div className="max-w-3xl mx-auto">
           <a
             href="https://www.youtube.com/watch?v=aAeJr9tXrGg"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary"
+            className="group relative block rounded-2xl overflow-hidden shadow-2xl"
           >
-            <Play size={16} />
-            Watch the demo (2 min)
-          </a>
-        </div>
-        <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
-          <div className="aspect-video w-full">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/aAeJr9tXrGg?rel=0&modestbranding=1&playsinline=1"
-              title="Encountive Demo"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              className="w-full h-full"
-              style={{ border: "none" }}
+            <img
+              src="https://img.youtube.com/vi/aAeJr9tXrGg/maxresdefault.jpg"
+              alt="Watch the Encountive demo"
+              className="w-full h-auto block"
             />
-          </div>
+            <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-colors">
+              <div className="w-20 h-20 rounded-full bg-white/90 group-hover:bg-white flex items-center justify-center shadow-xl transition-all group-hover:scale-110">
+                <Play size={32} className="text-gray-900 ml-1" />
+              </div>
+            </div>
+          </a>
         </div>
       </Section>
 
