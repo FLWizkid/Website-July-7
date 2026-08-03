@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import Logo from "./Logo";
+import DemoModal from "./DemoModal";
 import { cn } from "@/lib/cn";
 
 type NavItem = {
@@ -29,6 +30,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [demoOpen, setDemoOpen] = useState(false);
   const location = useLocation();
   const solutionsRef = useRef<HTMLDivElement>(null);
 
@@ -128,14 +130,12 @@ export default function Header() {
 
         {/* Desktop CTAs */}
         <div className="hidden lg:flex items-center gap-3">
-          <a
-            href="https://app.encountive.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => setDemoOpen(true)}
             className="btn-ghost text-sm min-h-[44px]"
           >
             Login/Demo
-          </a>
+          </button>
           <Link to="/contact" className="btn-primary text-xs lg:text-sm px-4 lg:px-6 min-h-[40px] lg:min-h-[44px]">
             Contact/Plan a Pilot <ArrowRight size={16} />
           </Link>
@@ -193,14 +193,15 @@ export default function Header() {
             )}
 
             <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-white/10">
-              <a
-                href="https://app.encountive.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => {
+                  setMobileOpen(false);
+                  setDemoOpen(true);
+                }}
                 className="btn-secondary w-full justify-center min-h-[48px]"
               >
                 Login/Demo
-              </a>
+              </button>
               <Link to="/contact" className="btn-primary w-full justify-center min-h-[48px]">
                 Contact/Plan a Pilot
               </Link>
@@ -208,6 +209,8 @@ export default function Header() {
           </nav>
         </div>
       )}
+
+      <DemoModal open={demoOpen} onClose={() => setDemoOpen(false)} />
     </header>
   );
 }
