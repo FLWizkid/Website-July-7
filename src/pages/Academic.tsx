@@ -113,7 +113,7 @@ export default function Academic() {
 
       {/* ROI Callout */}
       <Section eyebrow="Academic cohort example" title="3.88x ROI with $122k in modeled benefit for a 200-student cohort">
-        <p className="text-brand-muted text-lg leading-relaxed max-w-2xl mb-6">
+        <p className="text-brand-muted text-lg leading-relaxed mb-6">
           Modeled reductions in faculty prep time, improved pass rates, and cohort-level competency growth. Full
           assumptions on our ROI page.
         </p>

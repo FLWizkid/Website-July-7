@@ -54,7 +54,7 @@ export default function Team() {
       />
 
       <Section>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {team.map((m) => (
             <div key={m.name} className="card flex flex-col gap-4">
               <div className="flex items-start gap-4">

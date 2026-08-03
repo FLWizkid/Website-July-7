@@ -65,7 +65,7 @@ export default function About() {
 
       {/* Founder Letter */}
       <Section eyebrow="From the founder" tone="muted">
-        <div className="max-w-2xl">
+        <div className="w-full">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-16 h-16 rounded-2xl bg-brand-gradient flex items-center justify-center text-white font-bold text-xl shrink-0">
               MT

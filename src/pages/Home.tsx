@@ -222,7 +222,7 @@ export default function Home() {
 
       {/* Demo Video */}
       <Section eyebrow="Demo" title="Watch how Encountive transforms clinical learning" align="center" tone="muted">
-        <p className="text-brand-muted text-lg leading-relaxed max-w-2xl mx-auto mb-8 text-center">
+        <p className="text-brand-muted text-lg leading-relaxed mx-auto mb-8 text-center">
           See how our AI-adaptive engine coaches learners through realistic scenarios, identifies knowledge gaps in real
           time, and delivers measurable outcomes your institution can defend — all with the rigor clinical teams demand.
         </p>

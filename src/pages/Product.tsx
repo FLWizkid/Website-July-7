@@ -102,7 +102,7 @@ export default function Product() {
           <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
           <span className="text-amber-300 text-sm font-medium">Future product — in active development, not yet available</span>
         </div>
-        <p className="text-brand-muted text-lg leading-relaxed max-w-2xl mb-8">
+        <p className="text-brand-muted text-lg leading-relaxed mb-8">
           We are developing XR modules to extend the Encountive platform into immersive, hands-on procedural training.
           This capability is targeted for release in the first half of 2027 and is subject to change.
         </p>

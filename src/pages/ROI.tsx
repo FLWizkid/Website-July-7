@@ -137,7 +137,7 @@ export default function ROI() {
 
       {/* Outcome-based contracts */}
       <Section eyebrow="Pricing philosophy" title="Contracts tied to outcomes, not features">
-        <p className="text-brand-muted text-lg leading-relaxed max-w-2xl mb-8">
+        <p className="text-brand-muted text-lg leading-relaxed mb-8">
           As our evidence base matures, we're preparing outcome-based contracts tied to the measures your leaders
           already track — so value and cost move together.
         </p>

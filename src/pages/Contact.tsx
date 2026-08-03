@@ -147,7 +147,7 @@ export default function Contact() {
       />
 
       <Section>
-        <div className="grid grid-cols-1 gap-12 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 gap-12 w-full">
           {/* Info Panel */}
           <div className="space-y-6">
             <div>

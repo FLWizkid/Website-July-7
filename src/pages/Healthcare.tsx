@@ -111,7 +111,7 @@ export default function Healthcare() {
 
       {/* ROI Callout */}
       <Section eyebrow="Hospital cohort example" title="Up to $293k in annual benefit modeled for a 100-nurse cohort">
-        <p className="text-brand-muted text-lg leading-relaxed max-w-2xl mb-6">
+        <p className="text-brand-muted text-lg leading-relaxed mb-6">
           Projected 4.0x ROI with payback around 1.3 months. Based on modeled reductions in turnover, training hours,
           and adverse event risk. Full assumptions on our ROI page.
         </p>
