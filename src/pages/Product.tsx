@@ -79,16 +79,6 @@ export default function Product() {
           </>
         }
         subtitle="A complete simulation platform purpose-built for healthcare training. Rubric-anchored scenarios, adaptive coaching, and cohort-level evidence — web, mobile, and XR ready."
-        actions={
-          <>
-            <Link to="/contact" className="btn-primary">
-              Contact/Plan a Pilot <ArrowRight size={16} />
-            </Link>
-            <Link to="/roi" className="btn-secondary">
-              See ROI model
-            </Link>
-          </>
-        }
       />
 
       {/* Core Features */}
@@ -147,10 +137,7 @@ export default function Product() {
         actions={
           <>
             <Link to="/contact" className="btn-primary">
-              Contact/Plan a Pilot <ArrowRight size={16} />
-            </Link>
-            <Link to="/roi" className="btn-secondary">
-              See ROI model
+              Contact us <ArrowRight size={16} />
             </Link>
           </>
         }
