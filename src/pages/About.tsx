@@ -31,14 +31,19 @@ export default function About() {
   return (
     <>
       {/* Hero */}
-      <div className="hero-glow pt-36 pb-20">
-        <div className="container-xl mx-auto max-w-3xl">
+      <div className="hero-glow pt-20 sm:pt-28 md:pt-32 pb-14 sm:pb-18 md:pb-20">
+        <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex flex-wrap gap-3 justify-center mb-8">
+            <Link to="/contact" className="btn-primary">
+              Contact/Plan a Pilot <ArrowRight size={16} />
+            </Link>
+          </div>
           <p className="eyebrow mb-4">About Encountive</p>
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold leading-tight mb-5">
             Practice should be safe, coached, and{" "}
             <span className="gradient-text">grown</span>
           </h1>
-          <p className="text-brand-muted text-xl leading-relaxed">
+          <p className="text-brand-muted text-base md:text-lg leading-relaxed">
             Clinical teams are expected to navigate conflict, grief, uncertainty, and high-stakes conversations —
             often with limited practice and inconsistent feedback. Encountive is designed to close that gap with
             simulation that feels real, supports repeat practice, and makes growth measurable through coaching and

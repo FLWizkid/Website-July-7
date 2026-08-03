@@ -94,19 +94,9 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <div className="hero-glow pt-36 pb-24">
-        <div className="container-xl mx-auto">
-          <p className="eyebrow mb-4 animate-fade-up">AI-adaptive clinical simulation</p>
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 max-w-3xl animate-fade-up [animation-delay:0.1s]">
-            AI-Powered Clinical Simulation for{" "}
-            <span className="gradient-text">Safer, More Confident</span>{" "}
-            Healthcare Teams
-          </h1>
-          <p className="text-brand-muted text-xl leading-relaxed max-w-2xl mb-10 animate-fade-up [animation-delay:0.2s]">
-            Encountive improves communication, decision-making, emotional resilience, and clinical safety across the
-            healthcare workforce. Powered by The Encountive Engine, your adaptive clinical intelligence engine.
-          </p>
-          <div className="flex flex-wrap gap-4 animate-fade-up [animation-delay:0.3s]">
+      <div className="hero-glow pt-20 sm:pt-28 md:pt-32 pb-14 sm:pb-18 md:pb-20">
+        <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex flex-wrap gap-3 justify-center mb-8 animate-fade-up">
             <Link to="/contact" className="btn-primary">
               Contact/Plan a Pilot <ArrowRight size={16} />
             </Link>
@@ -114,6 +104,16 @@ export default function Home() {
               About the product
             </Link>
           </div>
+          <p className="eyebrow mb-4 animate-fade-up [animation-delay:0.1s]">AI-adaptive clinical simulation</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold leading-tight mb-5 animate-fade-up [animation-delay:0.2s]">
+            AI-Powered Clinical Simulation for{" "}
+            <span className="gradient-text">Safer, More Confident</span>{" "}
+            Healthcare Teams
+          </h1>
+          <p className="text-brand-muted text-base md:text-lg leading-relaxed animate-fade-up [animation-delay:0.3s]">
+            Encountive improves communication, decision-making, emotional resilience, and clinical safety across the
+            healthcare workforce. Powered by The Encountive Engine, your adaptive clinical intelligence engine.
+          </p>
         </div>
       </div>
 
@@ -275,13 +275,10 @@ export default function Home() {
           </div>
           <div className="card">
             <h3 className="font-semibold text-white mb-3">Preparing pilots — limited spots</h3>
-            <p className="text-sm text-brand-muted leading-relaxed mb-4">
+            <p className="text-sm text-brand-muted leading-relaxed">
               We run scoped 60–90 day pilots with baseline-to-post measurement, conversion terms on success, and
               evaluation reports suitable for QI and credentialing.
             </p>
-            <Link to="/contact" className="btn-primary text-sm">
-              Contact/Plan a Pilot <ArrowRight size={14} />
-            </Link>
           </div>
         </div>
       </Section>

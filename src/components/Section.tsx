@@ -33,7 +33,7 @@ export default function Section({
 }: SectionProps) {
   return (
     <section id={id} className={cn("py-12 sm:py-16 md:py-20", toneClasses[tone], className)}>
-      <div className={cn("container-xl mx-auto", innerClassName)}>
+      <div className={cn("container-wide mx-auto px-4 sm:px-6 lg:px-8", innerClassName)}>
         {(eyebrow || title || subtitle) && (
           <div className={cn("mb-8 sm:mb-10 md:mb-12", align === "center" ? "text-center" : "")}>
             {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
@@ -41,7 +41,7 @@ export default function Section({
               <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold leading-tight mb-4">{title}</h2>
             )}
             {subtitle && (
-              <p className={cn("text-brand-muted text-base md:text-lg leading-relaxed", align === "center" ? "mx-auto max-w-2xl" : "max-w-2xl")}>
+              <p className={cn("text-brand-muted text-base md:text-lg leading-relaxed")}>
                 {subtitle}
               </p>
             )}
