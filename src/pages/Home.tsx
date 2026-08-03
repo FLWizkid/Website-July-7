@@ -12,7 +12,6 @@ import {
   Play,
 } from "lucide-react";
 import Section from "@/components/Section";
-import CtaBanner from "@/components/CtaBanner";
 
 const audiences = [
   {
@@ -286,8 +285,6 @@ export default function Home() {
           </div>
         </div>
       </Section>
-
-      <CtaBanner />
     </>
   );
 }

@@ -1,7 +1,6 @@
 import { Linkedin } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
-import CtaBanner from "@/components/CtaBanner";
 
 type Member = {
   name: string;
@@ -97,12 +96,6 @@ export default function Team() {
           ))}
         </div>
       </Section>
-
-      <CtaBanner
-        title="Interested in joining us?"
-        subtitle="We're building with clinical enterprises and academic programs. Reach out if you'd like to collaborate or learn more."
-        primaryLabel="Contact/Plan a Pilot"
-      />
     </>
   );
 }

@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
-import CtaBanner from "@/components/CtaBanner";
 
 const coreFeatures = [
   {
@@ -142,12 +141,6 @@ export default function Product() {
           </p>
         </div>
       </Section>
-
-      <CtaBanner
-        title="Ready to see the engine in action?"
-        subtitle="We'll walk you through a live scenario, show you the coaching layer, and discuss how pilots are structured."
-        primaryLabel="Contact/Plan a Pilot"
-      />
     </>
   );
 }

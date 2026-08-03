@@ -64,6 +64,7 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 text-xs text-brand-muted">
           <p>&copy; {new Date().getFullYear()} Encountive, Inc. All rights reserved.</p>
+          <p>Patent Pending 2026</p>
           <p>Accessibility: captions, transcripts, WCAG-compliant delivery, keyboard navigation.</p>
         </div>
       </div>

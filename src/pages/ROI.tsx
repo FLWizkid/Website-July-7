@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight, TrendingUp, Clock, DollarSign, Users } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
-import CtaBanner from "@/components/CtaBanner";
 
 const hospitalStats = [
   { value: "4.0x", label: "Projected ROI" },
@@ -138,12 +137,6 @@ export default function ROI() {
           Discuss your pilot <ArrowRight size={16} />
         </Link>
       </Section>
-
-      <CtaBanner
-        title="Let's build a model for your organization"
-        subtitle="Share your cohort size, priority scenarios, and baseline metrics — we'll build a custom ROI projection for your pilot planning."
-        primaryLabel="Contact/Plan a Pilot"
-      />
     </>
   );
 }

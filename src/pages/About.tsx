@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Target, Lightbulb, BarChart3, CheckCircle2 } from "lucide-react";
 import Section from "@/components/Section";
-import CtaBanner from "@/components/CtaBanner";
 
 const pillars = [
   {
@@ -142,14 +141,6 @@ export default function About() {
           Let's talk <ArrowRight size={16} />
         </Link>
       </Section>
-
-      <CtaBanner
-        title="Bring us your pain points"
-        subtitle="We'll bring the scaffolding that turns them into skills. Contact us to start a conversation about piloting Encountive at your organization."
-        primaryLabel="Start the conversation"
-        secondaryLabel="Learn about the product"
-        secondaryTo="/product"
-      />
     </>
   );
 }

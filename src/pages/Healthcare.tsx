@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
-import CtaBanner from "@/components/CtaBanner";
 
 const useCases = [
   {
@@ -149,12 +148,6 @@ export default function Healthcare() {
           </div>
         </div>
       </Section>
-
-      <CtaBanner
-        title="Ready to improve clinical training outcomes?"
-        subtitle="Start with a scoped pilot designed around your highest-priority scenarios and cohorts."
-        primaryLabel="Contact/Plan a Pilot"
-      />
     </>
   );
 }

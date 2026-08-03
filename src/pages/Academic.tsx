@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
-import CtaBanner from "@/components/CtaBanner";
 
 const segments = [
   {
@@ -150,13 +149,6 @@ export default function Academic() {
           </div>
         </div>
       </Section>
-
-      <CtaBanner
-        title="Ready to elevate your program outcomes?"
-        subtitle="Start with a scoped pilot aligned to your course objectives. We'll help you measure what matters."
-        primaryLabel="Request an academic demo"
-        secondaryLabel="Contact us"
-      />
     </>
   );
 }
