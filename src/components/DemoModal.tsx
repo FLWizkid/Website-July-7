@@ -41,7 +41,7 @@ export default function DemoModal({ open, onClose }: DemoModalProps) {
           <X size={24} />
         </button>
         <iframe
-          src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&controls=1&rel=0&modestbranding=1&playsinline=1`}
+          src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1&playsinline=1`}
           title="Encountive Demo"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
