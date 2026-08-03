@@ -135,13 +135,10 @@ export default function Header() {
             rel="noopener noreferrer"
             className="btn-ghost text-sm min-h-[44px]"
           >
-            Login
+            Login/Demo
           </a>
-          <Link to="/contact" className="btn-secondary text-sm min-h-[44px]">
-            Contact
-          </Link>
           <Link to="/contact" className="btn-primary text-sm min-h-[44px]">
-            Plan a pilot
+            Contact/Plan a Pilot
           </Link>
         </div>
 
@@ -203,10 +200,10 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="btn-secondary w-full justify-center min-h-[48px]"
               >
-                Login
+                Login/Demo
               </a>
               <Link to="/contact" className="btn-primary w-full justify-center min-h-[48px]">
-                Plan a pilot
+                Contact/Plan a Pilot
               </Link>
             </div>
           </nav>
