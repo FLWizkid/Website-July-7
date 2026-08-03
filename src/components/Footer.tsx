@@ -3,7 +3,6 @@ import Logo from "./Logo";
 
 const explore = [
   { label: "Product", to: "/product" },
-  { label: "Catalog", to: "/catalog" },
   { label: "Healthcare", to: "/solutions/healthcare" },
   { label: "Academic", to: "/solutions/academic" },
   { label: "ROI", to: "/roi" },

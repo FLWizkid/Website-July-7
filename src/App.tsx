@@ -1,9 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
-import Catalog from "./pages/Catalog";
 import Healthcare from "./pages/Healthcare";
 import Academic from "./pages/Academic";
 import ROI from "./pages/ROI";
@@ -14,13 +12,10 @@ import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
-    <>
-      <ScrollToTop />
-      <Routes>
+    <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
-        <Route path="/catalog" element={<Catalog />} />
         <Route path="/solutions/healthcare" element={<Healthcare />} />
         <Route path="/solutions/academic" element={<Academic />} />
         <Route path="/roi" element={<ROI />} />
@@ -29,7 +24,6 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Route>
-      </Routes>
-    </>
+    </Routes>
   );
 }
