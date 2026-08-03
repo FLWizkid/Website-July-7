@@ -23,7 +23,6 @@ const NAV: NavItem[] = [
   { label: "ROI", to: "/roi" },
   { label: "Team", to: "/team" },
   { label: "About", to: "/about" },
-  { label: "Contact", to: "/contact" },
 ];
 
 export default function Header() {
@@ -66,14 +65,14 @@ export default function Header() {
         Skip to main content
       </a>
 
-      <div className="container-xl mx-auto flex h-16 items-center justify-between gap-6">
+      <div className="container-xl mx-auto flex h-16 items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link to="/" aria-label="Encountive home">
           <Logo />
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+        <nav className="hidden lg:flex items-center gap-0.5" aria-label="Main navigation">
           {NAV.map((item) =>
             item.children ? (
               <div key={item.label} ref={solutionsRef} className="relative">
@@ -137,7 +136,7 @@ export default function Header() {
           >
             Login/Demo
           </a>
-          <Link to="/contact" className="btn-primary text-sm min-h-[44px]">
+          <Link to="/contact" className="btn-primary text-xs lg:text-sm px-4 lg:px-6 min-h-[40px] lg:min-h-[44px]">
             Contact/Plan a Pilot
           </Link>
         </div>
