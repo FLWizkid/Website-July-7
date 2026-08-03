@@ -101,8 +101,7 @@ export default function Team() {
       <CtaBanner
         title="Interested in joining us?"
         subtitle="We're building with clinical enterprises and academic programs. Reach out if you'd like to collaborate or learn more."
-        primaryLabel="Contact us"
-        secondaryLabel="Plan a pilot"
+        primaryLabel="Contact/Plan a Pilot"
       />
     </>
   );

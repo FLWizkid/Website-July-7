@@ -12,9 +12,9 @@ type CtaBannerProps = {
 export default function CtaBanner({
   title = "Ready to improve clinical training outcomes?",
   subtitle = "Start with a scoped pilot. We'll help you plan deployment, define metrics, and design scale.",
-  primaryLabel = "Plan a pilot",
+  primaryLabel = "Contact/Plan a Pilot",
   primaryTo = "/contact",
-  secondaryLabel = "Contact us",
+  secondaryLabel,
   secondaryTo = "/contact",
 }: CtaBannerProps) {
   return (
@@ -29,7 +29,9 @@ export default function CtaBanner({
           <p className="text-brand-muted text-base md:text-lg leading-relaxed max-w-xl mx-auto mb-8">{subtitle}</p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link to={primaryTo} className="btn-primary min-h-[48px]">{primaryLabel}</Link>
-            <Link to={secondaryTo} className="btn-secondary min-h-[48px]">{secondaryLabel}</Link>
+            {secondaryLabel && (
+              <Link to={secondaryTo} className="btn-secondary min-h-[48px]">{secondaryLabel}</Link>
+            )}
           </div>
         </div>
       </div>

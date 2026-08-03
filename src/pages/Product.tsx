@@ -82,7 +82,7 @@ export default function Product() {
         actions={
           <>
             <Link to="/contact" className="btn-primary">
-              Plan a pilot <ArrowRight size={16} />
+              Contact/Plan a Pilot <ArrowRight size={16} />
             </Link>
             <Link to="/roi" className="btn-secondary">
               See ROI model
@@ -146,8 +146,7 @@ export default function Product() {
       <CtaBanner
         title="Ready to see the engine in action?"
         subtitle="We'll walk you through a live scenario, show you the coaching layer, and discuss how pilots are structured."
-        primaryLabel="Plan a pilot"
-        secondaryLabel="Contact us"
+        primaryLabel="Contact/Plan a Pilot"
       />
     </>
   );

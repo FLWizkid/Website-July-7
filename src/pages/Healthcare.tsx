@@ -153,8 +153,7 @@ export default function Healthcare() {
       <CtaBanner
         title="Ready to improve clinical training outcomes?"
         subtitle="Start with a scoped pilot designed around your highest-priority scenarios and cohorts."
-        primaryLabel="Plan a pilot"
-        secondaryLabel="Contact us"
+        primaryLabel="Contact/Plan a Pilot"
       />
     </>
   );

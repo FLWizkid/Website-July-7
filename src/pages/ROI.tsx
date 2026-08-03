@@ -142,8 +142,7 @@ export default function ROI() {
       <CtaBanner
         title="Let's build a model for your organization"
         subtitle="Share your cohort size, priority scenarios, and baseline metrics — we'll build a custom ROI projection for your pilot planning."
-        primaryLabel="Plan a pilot"
-        secondaryLabel="Contact us"
+        primaryLabel="Contact/Plan a Pilot"
       />
     </>
   );

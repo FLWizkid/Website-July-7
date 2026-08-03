@@ -109,7 +109,7 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap gap-4 animate-fade-up [animation-delay:0.3s]">
             <Link to="/contact" className="btn-primary">
-              Plan a pilot <ArrowRight size={16} />
+              Contact/Plan a Pilot <ArrowRight size={16} />
             </Link>
             <Link to="/product" className="btn-secondary">
               About the product
@@ -281,7 +281,7 @@ export default function Home() {
               evaluation reports suitable for QI and credentialing.
             </p>
             <Link to="/contact" className="btn-primary text-sm">
-              Plan a pilot <ArrowRight size={14} />
+              Contact/Plan a Pilot <ArrowRight size={14} />
             </Link>
           </div>
         </div>
