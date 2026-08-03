@@ -95,7 +95,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <div className="hero-glow pt-20 sm:pt-28 md:pt-32 pb-14 sm:pb-18 md:pb-20">
+      <div className="hero-glow pt-20 sm:pt-24 md:pt-28 pb-10 sm:pb-12 md:pb-14">
         <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8">
           <p className="eyebrow mb-4 animate-fade-up [animation-delay:0.1s]">AI-adaptive clinical simulation</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold leading-tight mb-5 animate-fade-up [animation-delay:0.2s]">
