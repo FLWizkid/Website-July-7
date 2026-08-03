@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Target, Lightbulb, BarChart3, CheckCircle2 } from "lucide-react";
 import Section from "@/components/Section";
-import BackButton from "@/components/BackButton";
 import CtaBanner from "@/components/CtaBanner";
 
 const pillars = [
@@ -32,13 +31,8 @@ const visionPoints = [
 export default function About() {
   return (
     <>
-      {/* Back button — flush left just under the nav bar */}
-      <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24">
-        <BackButton />
-      </div>
-
       {/* Hero */}
-      <div className="hero-glow pt-6 pb-14 sm:pb-18 md:pb-20">
+      <div className="hero-glow pt-20 sm:pt-28 md:pt-32 pb-14 sm:pb-18 md:pb-20">
         <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8">
           <p className="eyebrow mb-4">About Encountive</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold leading-tight mb-5">

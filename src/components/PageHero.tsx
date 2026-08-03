@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/cn";
-import BackButton from "./BackButton";
 
 type PageHeroProps = {
   eyebrow?: string;
@@ -14,9 +13,6 @@ export default function PageHero({ eyebrow, title, subtitle, actions, align = "c
   return (
     <div className={cn("hero-glow pt-20 sm:pt-28 md:pt-32 pb-14 sm:pb-18 md:pb-20", align === "center" ? "text-center" : "")}>
       <div className={cn("container-wide mx-auto px-4 sm:px-6 lg:px-8", align === "center" ? "flex flex-col items-center" : "")}>
-        <div className="w-full self-stretch mb-6 flex justify-start">
-          <BackButton />
-        </div>
         {eyebrow && <p className="eyebrow mb-4">{eyebrow}</p>}
         <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold leading-tight mb-5">
           {title}
