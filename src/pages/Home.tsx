@@ -12,6 +12,7 @@ import {
   Play,
 } from "lucide-react";
 import Section from "@/components/Section";
+import CtaBanner from "@/components/CtaBanner";
 
 const audiences = [
   {
@@ -282,6 +283,19 @@ export default function Home() {
           </div>
         </div>
       </Section>
+
+      <CtaBanner
+        actions={
+          <>
+            <Link to="/contact" className="btn-primary">
+              Contact/Plan a Pilot <ArrowRight size={16} />
+            </Link>
+            <Link to="/product" className="btn-secondary">
+              About the product
+            </Link>
+          </>
+        }
+      />
     </>
   );
 }

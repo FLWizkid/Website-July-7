@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, TrendingUp, Clock, DollarSign, Users } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import CtaBanner from "@/components/CtaBanner";
 
 const hospitalStats = [
   { value: "4.0x", label: "Projected ROI" },
@@ -64,6 +65,13 @@ export default function ROI() {
           </>
         }
         subtitle="Illustrative models built on real cost drivers. We'll customize projections for your specific cohort, scenario mix, and baseline metrics during the pilot planning process."
+        actions={
+          <>
+            <Link to="/contact" className="btn-primary">
+              Discuss your pilot <ArrowRight size={16} />
+            </Link>
+          </>
+        }
       />
 
       {/* Hospital */}
@@ -137,6 +145,16 @@ export default function ROI() {
           Discuss your pilot <ArrowRight size={16} />
         </Link>
       </Section>
+
+      <CtaBanner
+        actions={
+          <>
+            <Link to="/contact" className="btn-primary">
+              Discuss your pilot <ArrowRight size={16} />
+            </Link>
+          </>
+        }
+      />
     </>
   );
 }

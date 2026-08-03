@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Target, Lightbulb, BarChart3, CheckCircle2 } from "lucide-react";
 import Section from "@/components/Section";
 import BackButton from "@/components/BackButton";
+import CtaBanner from "@/components/CtaBanner";
 
 const pillars = [
   {
@@ -150,6 +151,16 @@ export default function About() {
           Let's talk <ArrowRight size={16} />
         </Link>
       </Section>
+
+      <CtaBanner
+        actions={
+          <>
+            <Link to="/contact" className="btn-primary">
+              Contact/Plan a Pilot <ArrowRight size={16} />
+            </Link>
+          </>
+        }
+      />
     </>
   );
 }

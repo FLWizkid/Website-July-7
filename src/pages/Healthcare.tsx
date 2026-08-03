@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import CtaBanner from "@/components/CtaBanner";
 
 const useCases = [
   {
@@ -148,6 +149,19 @@ export default function Healthcare() {
           </div>
         </div>
       </Section>
+
+      <CtaBanner
+        actions={
+          <>
+            <Link to="/contact" className="btn-primary">
+              Request a healthcare demo <ArrowRight size={16} />
+            </Link>
+            <Link to="/roi" className="btn-secondary">
+              See ROI model
+            </Link>
+          </>
+        }
+      />
     </>
   );
 }

@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import CtaBanner from "@/components/CtaBanner";
 
 const segments = [
   {
@@ -149,6 +150,19 @@ export default function Academic() {
           </div>
         </div>
       </Section>
+
+      <CtaBanner
+        actions={
+          <>
+            <Link to="/contact" className="btn-primary">
+              Request an academic demo <ArrowRight size={16} />
+            </Link>
+            <Link to="/roi" className="btn-secondary">
+              See program outcomes
+            </Link>
+          </>
+        }
+      />
     </>
   );
 }

@@ -1,6 +1,8 @@
-import { Linkedin } from "lucide-react";
+import { Linkedin, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import CtaBanner from "@/components/CtaBanner";
 
 type Member = {
   name: string;
@@ -42,6 +44,16 @@ export default function Team() {
         eyebrow="Our team"
         title="Built by clinicians and technologists"
         subtitle="Our team combines deep clinical experience with cutting-edge technology to build training solutions that make a real difference."
+        actions={
+          <>
+            <Link to="/contact" className="btn-primary">
+              Contact/Plan a Pilot <ArrowRight size={16} />
+            </Link>
+            <Link to="/about" className="btn-secondary">
+              About Encountive
+            </Link>
+          </>
+        }
       />
 
       <Section>
@@ -76,6 +88,19 @@ export default function Team() {
           ))}
         </div>
       </Section>
+
+      <CtaBanner
+        actions={
+          <>
+            <Link to="/contact" className="btn-primary">
+              Contact/Plan a Pilot <ArrowRight size={16} />
+            </Link>
+            <Link to="/about" className="btn-secondary">
+              About Encountive
+            </Link>
+          </>
+        }
+      />
     </>
   );
 }

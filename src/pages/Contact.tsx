@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 import { Mail, Phone, Building2 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import CtaBanner from "@/components/CtaBanner";
 
 /* HIDDEN: Form-related imports and logic — uncomment to restore
 import { useState, useRef, useEffect } from "react";
@@ -132,6 +134,16 @@ export default function Contact() {
         eyebrow="Contact"
         title="Contact us"
         subtitle="For general inquiries, product questions, or to learn more about our pilots and partnerships."
+        actions={
+          <>
+            <Link to="/about" className="btn-secondary">
+              About Encountive
+            </Link>
+            <Link to="/product" className="btn-secondary">
+              About the product
+            </Link>
+          </>
+        }
       />
 
       <Section>
@@ -301,6 +313,19 @@ export default function Contact() {
           END HIDDEN */}
         </div>
       </Section>
+
+      <CtaBanner
+        actions={
+          <>
+            <Link to="/about" className="btn-secondary">
+              About Encountive
+            </Link>
+            <Link to="/product" className="btn-secondary">
+              About the product
+            </Link>
+          </>
+        }
+      />
     </>
   );
 }
