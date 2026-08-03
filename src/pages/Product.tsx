@@ -44,15 +44,15 @@ const coreFeatures = [
   {
     icon: Smartphone,
     title: "Any device, any time",
-    body: "Web and mobile for broad reach. XR modules available when immersion truly moves the needle — plug in where it matters.",
+    body: "Web and mobile for broad reach today. XR modules are in active development and targeted for release in the first half of 2027.",
   },
 ];
 
 const xrCapabilities = [
-  "Phone-based AR/VR for hands-on procedural skills",
-  "Mastery rules and telemetry integrated with the core engine",
+  "Phone-based AR/VR designed for hands-on procedural skills",
+  "Mastery rules and telemetry planned for integration with the core engine",
   "Designed to complement, not replace, web and mobile practice",
-  "Scenario continuity across modalities — learner progress follows them",
+  "Scenario continuity across modalities — learner progress will follow them",
 ];
 
 const governance = [
@@ -78,7 +78,7 @@ export default function Product() {
             The <span className="gradient-text">Encountive Engine</span> — adaptive clinical intelligence
           </>
         }
-        subtitle="A complete simulation platform purpose-built for healthcare training. Rubric-anchored scenarios, adaptive coaching, and cohort-level evidence — web, mobile, and XR ready."
+        subtitle="A complete simulation platform purpose-built for healthcare training. Rubric-anchored scenarios, adaptive coaching, and cohort-level evidence — web and mobile today, with XR capabilities in development."
       />
 
       {/* Core Features */}
@@ -97,10 +97,14 @@ export default function Product() {
       </Section>
 
       {/* XR */}
-      <Section eyebrow="XR-ready" title="Phone-based AR/VR for hands-on skills — when you're ready" tone="muted">
+      <Section eyebrow="Coming H1 2027" title="Phone-based AR/VR for hands-on skills" tone="muted">
+        <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 border border-amber-500/30 px-4 py-1.5 mb-6">
+          <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+          <span className="text-amber-300 text-sm font-medium">Future product — in active development, not yet available</span>
+        </div>
         <p className="text-brand-muted text-lg leading-relaxed max-w-2xl mb-8">
-          Start on web and mobile for reach. Plug in XR modules — with mastery rules and telemetry — where immersion
-          truly moves the needle.
+          We are developing XR modules to extend the Encountive platform into immersive, hands-on procedural training.
+          This capability is targeted for release in the first half of 2027 and is subject to change.
         </p>
         <ul className="space-y-3">
           {xrCapabilities.map((item) => (

@@ -13,7 +13,7 @@ const pillars = [
   {
     icon: Lightbulb,
     title: "Mission",
-    body: "AI-adaptive simulation + XR with real-time analytics so every learner improves and every leader sees the impact.",
+    body: "AI-adaptive simulation with real-time analytics so every learner improves and every leader sees the impact. XR capabilities are in active development for 2027.",
   },
   {
     icon: BarChart3,
@@ -26,7 +26,7 @@ const visionPoints = [
   "An integrated learning stack for healthcare that links practice to outcomes",
   "Scenario libraries spanning every clinical discipline and role",
   "Outcome-based contracting tied to the metrics leaders already track",
-  "XR immersion layered into existing simulation workflows",
+  "XR immersion planned for integration into simulation workflows (coming 2027)",
 ];
 
 export default function About() {

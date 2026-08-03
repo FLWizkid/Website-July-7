@@ -83,7 +83,7 @@ const beforeAfter = [
   },
   {
     before: "Limited practice hours and scarce simulated patients",
-    after: "Repeatable encounters anywhere — desktop, mobile, or XR",
+    after: "Repeatable encounters anywhere — desktop, mobile, or XR (coming 2027)",
   },
   {
     before: "Rollouts stall on security and governance questions",
@@ -129,7 +129,7 @@ export default function Home() {
             "Branching scenarios anchored to your rubrics",
             "Immediate, targeted coaching after every attempt",
             "Cohort-level analytics leaders can defend",
-            "Web and mobile today; XR when immersion matters",
+            "Web and mobile today; XR in development for H1 2027",
           ].map((item) => (
             <div key={item} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="text-brand-cyan mt-0.5 shrink-0" />

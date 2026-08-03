@@ -32,7 +32,7 @@ const team: Member[] = [
     credentials: "PMP",
     initials: "DT",
     blurb:
-      "Leads technology and platform architecture. Builds the AI and XR systems that power The Encountive Engine.",
+      "Leads technology and platform architecture. Builds the AI systems that power The Encountive Engine, with XR capabilities in development.",
     linkedin: "https://www.linkedin.com/in/douglastully/",
   },
 ];
