@@ -29,7 +29,7 @@ const team: Member[] = [
     name: "Douglas Tully",
     title: "CIO and Co-Founder",
     role: "Chief Information Officer",
-    credentials: "PMP",
+    credentials: "CTO, PMP",
     initials: "DT",
     blurb:
       "Leads technology and platform architecture. Builds the AI systems that power The Encountive Engine, with XR capabilities in development.",
