@@ -15,7 +15,7 @@ type Member = {
 const team: Member[] = [
   {
     name: "Melissa Tully",
-    title: "Founder",
+    title: "CEO and Co-Founder",
     role: "Chief Executive Officer",
     credentials: "BSN, MHPE, RN-BC",
     initials: "MT",
@@ -24,32 +24,14 @@ const team: Member[] = [
     linkedin: "https://www.linkedin.com/in/melissajotully/",
   },
   {
-    name: "Jeff Plaza",
-    title: "Founder",
-    role: "Chief Commercial Officer",
-    initials: "JP",
-    blurb:
-      "Partners with healthcare organizations and academic programs to understand training needs and scope pilots that measure what matters.",
-    linkedin: "https://www.linkedin.com/in/jeff-plaza-creatingsolutions/",
-  },
-  {
     name: "Douglas Tully",
-    title: "Founder",
-    role: "President and CIO",
+    title: "CIO and Co-Founder",
+    role: "Chief Information Officer",
     credentials: "PMP",
     initials: "DT",
     blurb:
       "Leads technology and platform architecture. Builds the AI and XR systems that power The Encountive Engine.",
     linkedin: "https://www.linkedin.com/in/douglastully/",
-  },
-  {
-    name: "Nisha Patel",
-    title: "Founder",
-    role: "Chief Product Officer",
-    initials: "NP",
-    blurb:
-      "Defines product strategy and user experience. Makes sure Encountive works for clinicians, educators, and administrators.",
-    linkedin: "https://www.linkedin.com/in/nishap299/",
   },
 ];
 
@@ -63,18 +45,16 @@ export default function Team() {
       />
 
       <Section>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
           {team.map((m) => (
             <div key={m.name} className="card flex flex-col gap-4">
               <div className="flex items-start gap-4">
-                {/* Avatar */}
                 <div className="w-14 h-14 rounded-2xl bg-brand-gradient flex items-center justify-center text-white font-bold text-lg shrink-0">
                   {m.initials}
                 </div>
                 <div className="min-w-0">
                   <h2 className="font-semibold text-white text-lg leading-tight">{m.name}</h2>
                   <p className="text-xs text-brand-cyan mt-0.5">{m.title}</p>
-                  <p className="text-xs text-brand-muted">{m.role}</p>
                   {m.credentials && (
                     <p className="text-xs text-brand-dim mt-0.5">{m.credentials}</p>
                   )}

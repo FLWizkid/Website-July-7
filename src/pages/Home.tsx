@@ -95,8 +95,8 @@ export default function Home() {
     <>
       {/* Hero */}
       <div className="hero-glow pt-20 sm:pt-28 md:pt-32 pb-14 sm:pb-18 md:pb-20">
-        <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex flex-wrap gap-3 justify-center mb-8 animate-fade-up">
+        <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap gap-3 justify-start mb-8 animate-fade-up">
             <Link to="/contact" className="btn-primary">
               Contact/Plan a Pilot <ArrowRight size={16} />
             </Link>
