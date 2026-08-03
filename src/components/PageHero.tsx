@@ -14,13 +14,8 @@ export default function PageHero({ eyebrow, title, subtitle, actions, align = "c
   return (
     <div className={cn("hero-glow pt-20 sm:pt-28 md:pt-32 pb-14 sm:pb-18 md:pb-20", align === "center" ? "text-center" : "")}>
       <div className={cn("container-wide mx-auto px-4 sm:px-6 lg:px-8", align === "center" ? "flex flex-col items-center" : "")}>
-        <div className="w-full flex items-center justify-between gap-4 mb-6">
+        <div className="w-full mb-6">
           <BackButton />
-          {actions && (
-            <div className="flex flex-wrap gap-3 justify-end">
-              {actions}
-            </div>
-          )}
         </div>
         {eyebrow && <p className="eyebrow mb-4">{eyebrow}</p>}
         <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold leading-tight mb-5">
@@ -30,6 +25,11 @@ export default function PageHero({ eyebrow, title, subtitle, actions, align = "c
           <p className="text-brand-muted text-base md:text-lg leading-relaxed mb-8">
             {subtitle}
           </p>
+        )}
+        {actions && (
+          <div className={cn("flex flex-wrap gap-3", align === "center" ? "justify-center" : "justify-start")}>
+            {actions}
+          </div>
         )}
       </div>
     </div>
