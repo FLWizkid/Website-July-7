@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Building2,
@@ -14,7 +13,6 @@ import {
 } from "lucide-react";
 import Section from "@/components/Section";
 import CtaBanner from "@/components/CtaBanner";
-import DemoModal from "@/components/DemoModal";
 
 const audiences = [
   {
@@ -94,7 +92,6 @@ const beforeAfter = [
 ];
 
 export default function Home() {
-  const [demoOpen, setDemoOpen] = useState(false);
   return (
     <>
       {/* Hero */}
@@ -229,14 +226,29 @@ export default function Home() {
           See how our AI-adaptive engine coaches learners through realistic scenarios, identifies knowledge gaps in real
           time, and delivers measurable outcomes your institution can defend — all with the rigor clinical teams demand.
         </p>
-        <div className="flex justify-center">
-          <button
-            onClick={() => setDemoOpen(true)}
+        <div className="flex justify-center mb-8">
+          <a
+            href="https://www.youtube.com/watch?v=aAeJr9tXrGg"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary"
           >
             <Play size={16} />
             Watch the demo (2 min)
-          </button>
+          </a>
+        </div>
+        <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+          <div className="aspect-video w-full">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/aAeJr9tXrGg?rel=0&modestbranding=1&playsinline=1"
+              title="Encountive Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="w-full h-full"
+              style={{ border: "none" }}
+            />
+          </div>
         </div>
       </Section>
 
@@ -289,8 +301,6 @@ export default function Home() {
           </>
         }
       />
-
-      <DemoModal open={demoOpen} onClose={() => setDemoOpen(false)} />
     </>
   );
 }
