@@ -12,7 +12,6 @@ type NavItem = {
 
 const NAV: NavItem[] = [
   { label: "Home", to: "/" },
-  { label: "Product", to: "/product" },
   {
     label: "Solutions",
     children: [
@@ -20,6 +19,7 @@ const NAV: NavItem[] = [
       { label: "Academic", to: "/solutions/academic", description: "Vocational programs & sim centers" },
     ],
   },
+  { label: "Product", to: "/product" },
   { label: "ROI", to: "/roi" },
   { label: "Team", to: "/team" },
   { label: "About", to: "/about" },
