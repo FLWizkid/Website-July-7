@@ -162,9 +162,12 @@ export default function Contact() {
                 <div className="w-9 h-9 rounded-xl bg-brand-gradient-soft flex items-center justify-center shrink-0">
                   <Mail size={16} className="text-brand-cyan" />
                 </div>
-                <a href="mailto:doug@Encountive.com" className="hover:text-brand-cyan transition-colors text-sm">
-                  doug@Encountive.com
-                </a>
+                <div className="flex flex-col gap-0.5">
+                  <a href="mailto:Doug@Encountive.com" className="hover:text-brand-cyan transition-colors text-sm">
+                    Doug@Encountive.com
+                  </a>
+                  <span className="text-xs text-brand-muted">Founder — collecting comments &amp; requests</span>
+                </div>
               </div>
               <div className="flex items-center gap-3 text-brand-ink">
                 <div className="w-9 h-9 rounded-xl bg-brand-gradient-soft flex items-center justify-center shrink-0">
@@ -217,8 +220,8 @@ export default function Contact() {
                       <AlertCircle size={18} className="text-red-400 mt-0.5 shrink-0" />
                       <p className="text-sm text-red-300">
                         {errorMsg || "Something went wrong."} Please try again, or email{" "}
-                        <a href="mailto:doug@Encountive.com" className="underline">
-                          doug@Encountive.com
+                        <a href="mailto:Doug@Encountive.com" className="underline">
+                          Doug@Encountive.com
                         </a>{" "}
                         directly.
                       </p>
