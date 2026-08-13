@@ -19,8 +19,8 @@ const NAV: NavItem[] = [
       { label: "Academic", to: "/solutions/academic", description: "Vocational programs & sim centers" },
     ],
   },
-  { label: "Product", to: "/product" },
   { label: "ROI", to: "/roi" },
+  { label: "Product", to: "/product" },
   { label: "Team", to: "/team" },
   { label: "About", to: "/about" },
 ];
