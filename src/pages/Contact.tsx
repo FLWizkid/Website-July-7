@@ -162,20 +162,17 @@ export default function Contact() {
                 <div className="w-9 h-9 rounded-xl bg-brand-gradient-soft flex items-center justify-center shrink-0">
                   <Mail size={16} className="text-brand-cyan" />
                 </div>
-                <div className="flex flex-col gap-1">
-                  <a href="mailto:contact@encountive.com" className="hover:text-brand-cyan transition-colors text-sm">
-                    contact@encountive.com
-                  </a>
-                  <a href="mailto:doug@Encountive.com" className="hover:text-brand-cyan transition-colors text-sm">
-                    doug@Encountive.com
-                  </a>
-                </div>
+                <a href="mailto:doug@Encountive.com" className="hover:text-brand-cyan transition-colors text-sm">
+                  doug@Encountive.com
+                </a>
               </div>
               <div className="flex items-center gap-3 text-brand-ink">
                 <div className="w-9 h-9 rounded-xl bg-brand-gradient-soft flex items-center justify-center shrink-0">
                   <Phone size={16} className="text-brand-cyan" />
                 </div>
-                <span className="text-sm text-brand-muted">Cell: fast response</span>
+                <a href="tel:+18132059961" className="hover:text-brand-cyan transition-colors text-sm">
+                  +1 (813) 205-9961 — fast response
+                </a>
               </div>
               <div className="flex items-center gap-3 text-brand-ink">
                 <div className="w-9 h-9 rounded-xl bg-brand-gradient-soft flex items-center justify-center shrink-0">
@@ -220,8 +217,8 @@ export default function Contact() {
                       <AlertCircle size={18} className="text-red-400 mt-0.5 shrink-0" />
                       <p className="text-sm text-red-300">
                         {errorMsg || "Something went wrong."} Please try again, or email{" "}
-                        <a href="mailto:contact@encountive.com" className="underline">
-                          contact@encountive.com
+                        <a href="mailto:doug@Encountive.com" className="underline">
+                          doug@Encountive.com
                         </a>{" "}
                         directly.
                       </p>
