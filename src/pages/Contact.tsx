@@ -162,9 +162,20 @@ export default function Contact() {
                 <div className="w-9 h-9 rounded-xl bg-brand-gradient-soft flex items-center justify-center shrink-0">
                   <Mail size={16} className="text-brand-cyan" />
                 </div>
-                <a href="mailto:contact@encountive.com" className="hover:text-brand-cyan transition-colors text-sm">
-                  contact@encountive.com
-                </a>
+                <div className="flex flex-col gap-1">
+                  <a href="mailto:contact@encountive.com" className="hover:text-brand-cyan transition-colors text-sm">
+                    contact@encountive.com
+                  </a>
+                  <a href="mailto:doug@Encountive.com" className="hover:text-brand-cyan transition-colors text-sm">
+                    doug@Encountive.com
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 text-brand-ink">
+                <div className="w-9 h-9 rounded-xl bg-brand-gradient-soft flex items-center justify-center shrink-0">
+                  <Phone size={16} className="text-brand-cyan" />
+                </div>
+                <span className="text-sm text-brand-muted">Cell: fast response</span>
               </div>
               <div className="flex items-center gap-3 text-brand-ink">
                 <div className="w-9 h-9 rounded-xl bg-brand-gradient-soft flex items-center justify-center shrink-0">
@@ -174,9 +185,9 @@ export default function Contact() {
               </div>
               <div className="flex items-center gap-3 text-brand-ink">
                 <div className="w-9 h-9 rounded-xl bg-brand-gradient-soft flex items-center justify-center shrink-0">
-                  <Phone size={16} className="text-brand-cyan" />
+                  <Mail size={16} className="text-brand-cyan" />
                 </div>
-                <span className="text-sm text-brand-muted">Response within 1–2 business days</span>
+                <span className="text-sm text-brand-muted">All other contact: response within 1–2 business days</span>
               </div>
             </div>
             <div className="rounded-xl border border-white/10 p-4 bg-brand-surface/30">
