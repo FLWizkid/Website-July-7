@@ -9,6 +9,9 @@ type VideoPlayerProps = {
 export default function VideoPlayer({ videoId, title = "Video" }: VideoPlayerProps) {
   const [playing, setPlaying] = useState(false);
 
+  const origin = typeof window !== "undefined" ? window.location.origin : "";
+  const embedSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&enablejsapi=1&origin=${encodeURIComponent(origin)}`;
+
   return (
     <div
       className="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-black"
@@ -17,9 +20,10 @@ export default function VideoPlayer({ videoId, title = "Video" }: VideoPlayerPro
       {playing ? (
         <iframe
           className="absolute inset-0 w-full h-full"
-          src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
+          src={embedSrc}
           title={title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         />
       ) : (
