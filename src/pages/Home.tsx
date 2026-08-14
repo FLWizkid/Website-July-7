@@ -9,7 +9,6 @@ import {
   LineChart,
   CheckCircle2,
   ArrowRight,
-  Play,
 } from "lucide-react";
 import Section from "@/components/Section";
 import CtaBanner from "@/components/CtaBanner";
@@ -227,23 +226,15 @@ export default function Home() {
           time, and delivers measurable outcomes your institution can defend — all with the rigor clinical teams demand.
         </p>
         <div className="max-w-3xl mx-auto">
-          <a
-            href="https://www.youtube.com/watch?v=aAeJr9tXrGg"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative block rounded-2xl overflow-hidden shadow-2xl"
-          >
-            <img
-              src="https://img.youtube.com/vi/aAeJr9tXrGg/maxresdefault.jpg"
-              alt="Watch the Encountive demo"
-              className="w-full h-auto block"
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl" style={{ aspectRatio: "16 / 9" }}>
+            <iframe
+              src="https://www.youtube.com/embed/aAeJr9tXrGg?rel=0"
+              title="Encountive demo"
+              className="absolute inset-0 w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-colors">
-              <div className="w-20 h-20 rounded-full bg-white/90 group-hover:bg-white flex items-center justify-center shadow-xl transition-all group-hover:scale-110">
-                <Play size={32} className="text-gray-900 ml-1" />
-              </div>
-            </div>
-          </a>
+          </div>
         </div>
       </Section>
 
