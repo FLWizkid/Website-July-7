@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Play } from "lucide-react";
 
 type VideoPlayerProps = {
@@ -7,30 +6,12 @@ type VideoPlayerProps = {
 };
 
 export default function VideoPlayer({ videoId, title = "Video" }: VideoPlayerProps) {
-  const [playing, setPlaying] = useState(false);
-
-  if (playing) {
-    return (
-      <div
-        className="relative rounded-2xl overflow-hidden shadow-2xl"
-        style={{ aspectRatio: "16 / 9" }}
-      >
-        <iframe
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
-          title={title}
-          className="absolute inset-0 w-full h-full"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        />
-      </div>
-    );
-  }
-
   return (
-    <button
-      type="button"
-      onClick={() => setPlaying(true)}
-      aria-label={`Play ${title}`}
+    <a
+      href={`https://www.youtube.com/watch?v=${videoId}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Watch ${title} on YouTube`}
       className="group relative block rounded-2xl overflow-hidden shadow-2xl w-full"
       style={{ aspectRatio: "16 / 9" }}
     >
@@ -50,6 +31,6 @@ export default function VideoPlayer({ videoId, title = "Video" }: VideoPlayerPro
           <Play size={32} className="text-gray-900 ml-1" />
         </span>
       </span>
-    </button>
+    </a>
   );
 }
