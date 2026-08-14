@@ -203,8 +203,7 @@ export default function Contact() {
             </div>
             <div className="rounded-xl border border-white/10 p-4 bg-brand-surface/30">
               <p className="text-xs text-brand-muted leading-relaxed">
-                <strong className="text-brand-dim">Note:</strong> Do not include patient identifiers or PHI. This form
-                is for training and procurement discussions only.
+                <strong className="text-brand-dim">Note:</strong> Do not include patient identifiers or confidential or proprietary information.
               </p>
             </div>
           </div>
