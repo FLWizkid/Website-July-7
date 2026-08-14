@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, Building2 } from "lucide-react";
+import { Mail, Phone, Building2, Linkedin } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import CtaBanner from "@/components/CtaBanner";
@@ -162,11 +162,22 @@ export default function Contact() {
                 <div className="w-9 h-9 rounded-xl bg-brand-gradient-soft flex items-center justify-center shrink-0">
                   <Mail size={16} className="text-brand-cyan" />
                 </div>
-                <div className="flex flex-col gap-0.5">
-                  <a href="mailto:Doug@Encountive.com" className="hover:text-brand-cyan transition-colors text-sm">
-                    Doug@Encountive.com
-                  </a>
-                  <span className="text-xs text-brand-muted">Founder — collecting comments &amp; requests</span>
+                <div className="flex flex-col gap-1">
+                  <div className="flex items-center gap-2">
+                    <a href="mailto:Doug@Encountive.com" className="hover:text-brand-cyan transition-colors text-sm">
+                      Doug@Encountive.com
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/DouglasTully"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Douglas Tully on LinkedIn"
+                      className="inline-flex items-center justify-center w-7 h-7 rounded-lg border border-white/10 text-brand-muted hover:text-brand-cyan hover:border-brand-cyan/40 transition-colors shrink-0"
+                    >
+                      <Linkedin size={14} />
+                    </a>
+                  </div>
+                  <span className="text-xs text-brand-muted">Founder — Feedback and customer engagement</span>
                 </div>
               </div>
               <div className="flex items-center gap-3 text-brand-ink">
