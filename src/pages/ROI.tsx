@@ -22,17 +22,17 @@ const hospitalDrivers = [
   {
     icon: DollarSign,
     title: "Turnover cost reduction",
-    body: "Modeled $50,000–$150,000 in annual savings from improved retention through stronger onboarding and continuous coaching.",
+    body: <>Modeled $50,000–$150,000 in annual savings from <span className="text-brand-cyan font-semibold">improved retention</span> through stronger onboarding and continuous coaching.</>,
   },
   {
     icon: Clock,
     title: "Training time reduction",
-    body: "Asynchronous, on-demand practice reduces scheduled training hours. Faculty and preceptors focus on high-value coaching.",
+    body: <>Asynchronous, on-demand practice <span className="text-brand-cyan font-semibold">reduces scheduled training hours</span>. Faculty and preceptors focus on high-value coaching.</>,
   },
   {
     icon: TrendingUp,
     title: "Adverse event risk reduction",
-    body: "Repeatable practice on clinical safety behaviors reduces risk exposure and associated liability costs.",
+    body: <>Repeatable practice on clinical safety behaviors <span className="text-brand-cyan font-semibold">reduces risk exposure and associated liability</span> costs.</>,
   },
 ];
 
