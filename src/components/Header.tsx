@@ -134,7 +134,7 @@ export default function Header() {
             rel="noopener noreferrer"
             className="btn-ghost text-sm min-h-[44px]"
           >
-            Login/Demo
+            Logon or Try Demo
           </a>
           <Link to="/contact" className="btn-primary text-xs lg:text-sm px-4 lg:px-6 min-h-[40px] lg:min-h-[44px]">
             Contact/Plan a Pilot <ArrowRight size={16} />
@@ -199,7 +199,7 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="btn-secondary w-full justify-center min-h-[48px]"
               >
-                Login/Demo
+                Logon or Try Demo
               </a>
               <Link to="/contact" className="btn-primary w-full justify-center min-h-[48px]">
                 Contact/Plan a Pilot
