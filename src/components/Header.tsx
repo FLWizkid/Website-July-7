@@ -127,24 +127,22 @@ export default function Header() {
         </nav>
 
         {/* Desktop CTAs */}
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-2 xl:gap-3">
           <a
             href="https://app.encountive.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-ghost text-sm min-h-[44px] leading-tight text-center text-brand-cyan"
+            className="btn-ghost text-xs xl:text-sm min-h-[44px] leading-tight text-center text-brand-cyan px-3 xl:px-4"
           >
             <span>Logon or</span>
             <span>Try Free Demos</span>
           </a>
-          <Link to="/contact" className="btn-primary text-xs lg:text-sm px-4 lg:px-6 min-h-[40px] lg:min-h-[44px] leading-tight text-center bg-emerald-500 text-slate-950 hover:bg-emerald-400 hover:shadow-lg hover:shadow-emerald-500/20">
+          <Link to="/contact" className="btn-primary text-xs xl:text-sm px-3 xl:px-5 min-h-[44px] leading-tight text-center bg-emerald-500 text-slate-950 hover:bg-emerald-400 hover:shadow-lg hover:shadow-emerald-500/20">
             <span className="flex flex-col items-center leading-tight whitespace-nowrap">
-              <span>Contact Us</span>
-              <span>Or</span>
-              <span>Plan a</span>
-              <span>Pilot</span>
+              <span>Contact Us Or</span>
+              <span>Plan a Pilot</span>
             </span>
-            <ArrowRight size={16} />
+            <ArrowRight size={14} className="self-end" />
           </Link>
         </div>
 
