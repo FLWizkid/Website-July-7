@@ -87,8 +87,8 @@ export default function ROI() {
 
         <div className="rounded-2xl border border-brand-cyan/20 bg-brand-gradient-soft p-6 mb-8">
           <p className="text-sm text-brand-muted">
-            <strong className="text-white">Illustrative figure.</strong> Benefit — not price. Pilot scope and pricing
-            are built around your footprint.
+            <strong className="text-white">Illustrative figure.</strong> Benefit — not price. Scope and pricing
+            are built around <span className="text-brand-cyan font-semibold">your</span> footprint.
           </p>
         </div>
 
