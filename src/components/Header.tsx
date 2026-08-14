@@ -132,12 +132,12 @@ export default function Header() {
             href="https://app.encountive.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-ghost text-sm min-h-[44px] leading-tight text-center"
+            className="btn-ghost text-sm min-h-[44px] leading-tight text-center text-brand-cyan"
           >
             <span>Logon or</span>
             <span>Try Free Demos</span>
           </a>
-          <Link to="/contact" className="btn-primary text-xs lg:text-sm px-4 lg:px-6 min-h-[40px] lg:min-h-[44px] leading-tight text-center">
+          <Link to="/contact" className="btn-primary text-xs lg:text-sm px-4 lg:px-6 min-h-[40px] lg:min-h-[44px] leading-tight text-center bg-emerald-500 text-slate-950 hover:bg-emerald-400 hover:shadow-lg hover:shadow-emerald-500/20">
             <span>Contact Us or</span>
             <span>Plan a Pilot</span>
             <ArrowRight size={16} />
@@ -200,12 +200,12 @@ export default function Header() {
                 href="https://app.encountive.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary w-full justify-center min-h-[48px] leading-tight text-center"
+                className="btn-secondary w-full justify-center min-h-[48px] leading-tight text-center text-brand-cyan"
               >
                 <span>Logon or</span>
                 <span>Try Free Demos</span>
               </a>
-              <Link to="/contact" className="btn-primary w-full justify-center min-h-[48px] leading-tight text-center">
+              <Link to="/contact" className="btn-primary w-full justify-center min-h-[48px] leading-tight text-center bg-emerald-500 text-slate-950 hover:bg-emerald-400 hover:shadow-lg hover:shadow-emerald-500/20">
                 <span>Contact Us or</span>
                 <span>Plan a Pilot</span>
               </Link>
