@@ -1,4 +1,4 @@
-import { Linkedin, ArrowRight } from "lucide-react";
+import { Linkedin, ArrowRight, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
@@ -32,7 +32,7 @@ const team: Member[] = [
     credentials: "CTO, PMP",
     initials: "DT",
     blurb:
-      "Leads technology and platform architecture. Builds the AI systems that power The Encountive Engine, with XR capabilities in development.",
+      "Leads technology and platform architecture. Builds the AI systems that power The Encountive Engine, including with XR capabilities in development.",
     linkedin: "https://www.linkedin.com/in/douglastully/",
   },
 ];
@@ -57,32 +57,70 @@ export default function Team() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {team.map((m) => (
             <div key={m.name} className="card flex flex-col gap-4">
-              <div className="flex items-start gap-4">
-                <div className="w-14 h-14 rounded-2xl bg-brand-gradient flex items-center justify-center text-white font-bold text-lg shrink-0">
-                  {m.initials}
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start gap-4 min-w-0">
+                  <div className="w-14 h-14 rounded-2xl bg-brand-gradient flex items-center justify-center text-white font-bold text-lg shrink-0">
+                    {m.initials}
+                  </div>
+                  <div className="min-w-0">
+                    <h2 className="font-semibold text-white text-lg leading-tight">{m.name}</h2>
+                    <p className="text-xs text-brand-cyan mt-0.5">{m.title}</p>
+                    {m.credentials && (
+                      <p className="text-xs text-brand-dim mt-0.5">{m.credentials}</p>
+                    )}
+                  </div>
                 </div>
-                <div className="min-w-0">
-                  <h2 className="font-semibold text-white text-lg leading-tight">{m.name}</h2>
-                  <p className="text-xs text-brand-cyan mt-0.5">{m.title}</p>
-                  {m.credentials && (
-                    <p className="text-xs text-brand-dim mt-0.5">{m.credentials}</p>
-                  )}
-                </div>
+                {m.linkedin && (
+                  <a
+                    href={m.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${m.name} on LinkedIn`}
+                    className="shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-xl border border-white/10 text-brand-muted hover:text-brand-cyan hover:border-brand-cyan/40 transition-colors"
+                  >
+                    <Linkedin size={18} />
+                  </a>
+                )}
               </div>
               <p className="text-sm text-brand-muted leading-relaxed">{m.blurb}</p>
-              {m.linkedin && (
-                <a
-                  href={m.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs text-brand-muted hover:text-brand-cyan transition-colors"
-                >
-                  <Linkedin size={14} />
-                  LinkedIn
-                </a>
-              )}
             </div>
           ))}
+
+          {/* Extended Team Card */}
+          <div className="card flex flex-col gap-4 md:col-span-2">
+            <div className="flex items-start gap-4">
+              <div className="w-14 h-14 rounded-2xl bg-brand-gradient-soft flex items-center justify-center shrink-0">
+                <Users size={24} className="text-brand-cyan" />
+              </div>
+              <div className="min-w-0">
+                <h2 className="font-semibold text-white text-lg leading-tight">Our Extended Team</h2>
+                <p className="text-xs text-brand-cyan mt-0.5">Clinical advisors & technology partners</p>
+              </div>
+            </div>
+            <p className="text-sm text-brand-muted leading-relaxed">
+              Encountive is guided by a growing network of simulation educators, nurse leaders, clinical
+              faculty, and AI/UX specialists who help shape scenarios, rubrics, and platform capabilities.
+              Their expertise ensures every product decision is grounded in real clinical practice and
+              measurable learning outcomes.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {[
+                "Simulation Educators",
+                "Nurse Leaders",
+                "Clinical Faculty",
+                "AI Specialists",
+                "UX Researchers",
+                "Patient Safety Advisors",
+              ].map((role) => (
+                <span
+                  key={role}
+                  className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-brand-gradient-soft text-brand-cyan border border-white/5"
+                >
+                  {role}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </Section>
 
