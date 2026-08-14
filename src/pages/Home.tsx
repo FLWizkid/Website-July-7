@@ -41,21 +41,41 @@ const audiences = [
   },
 ];
 
-const differentiators = [
+const differentiators: {
+  icon: typeof ShieldCheck;
+  title: string;
+  body: React.ReactNode;
+}[] = [
   {
     icon: ShieldCheck,
     title: "Rubric-first design",
-    body: "Every scenario is anchored to clear competencies. Scoring is transparent and auditable — never a black box.",
+    body: (
+      <>
+        Every scenario is anchored to clear competencies. Scoring is{" "}
+        <span className="text-brand-cyan font-medium">transparent and auditable</span>{" "}
+        — never a black box.
+      </>
+    ),
   },
   {
     icon: Sparkles,
     title: "Adaptive remediation",
-    body: "The platform recognizes error patterns and serves the next best practice: a targeted micro-lesson, branched redo, or harder case.",
+    body: (
+      <>
+        The platform recognizes error patterns and serves the next best practice: a{" "}
+        <span className="text-brand-cyan font-medium">targeted micro-lesson, branched redo, or harder case</span>.
+      </>
+    ),
   },
   {
     icon: LineChart,
     title: "Evidence at scale",
-    body: "Attempt histories, heatmaps of common misses, and time-to-competence insights you can use for QI and accreditation.",
+    body: (
+      <>
+        Attempt histories, heatmaps of common misses, and time-to-competence insights you can{" "}
+        <span className="text-brand-cyan font-medium">use for QI and accreditation</span>.
+      </>
+    ),
   },
 ];
 
