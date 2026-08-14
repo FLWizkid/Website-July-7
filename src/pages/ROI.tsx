@@ -40,17 +40,17 @@ const academicDrivers = [
   {
     icon: Users,
     title: "Faculty time savings",
-    body: "Automated scenario delivery and coaching reduces per-student faculty contact hours by an estimated 30%+.",
+    body: <><span className="text-brand-cyan font-semibold">Automated scenario delivery and coaching</span> reduces per-student faculty contact hours by an estimated 30%+.</>,
   },
   {
     icon: TrendingUp,
     title: "Improved pass rates",
-    body: "Targeted remediation and repeat practice improve NCLEX and competency exam pass rates across cohorts.",
+    body: <>Targeted remediation and repeat practice <span className="text-brand-cyan font-semibold">improve NCLEX and competency exam pass rates</span> across cohorts.</>,
   },
   {
     icon: DollarSign,
     title: "Accreditation efficiency",
-    body: "Pre-built evidence packages, objectives, and evaluation templates reduce the cost of accreditation cycles.",
+    body: <><span className="text-brand-cyan font-semibold">Pre-built evidence packages</span>, objectives, and evaluation templates reduce the cost of accreditation cycles.</>,
   },
 ];
 
