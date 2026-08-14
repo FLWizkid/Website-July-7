@@ -147,7 +147,13 @@ export default function About() {
         actions={
           <>
             <Link to="/contact" className="btn-primary">
-              Contact/Plan a Pilot <ArrowRight size={16} />
+              <span className="flex flex-col items-center leading-tight whitespace-nowrap">
+                <span>Contact Us</span>
+                <span>Or</span>
+                <span>Plan a</span>
+                <span>Pilot</span>
+              </span>
+              <ArrowRight size={16} />
             </Link>
           </>
         }

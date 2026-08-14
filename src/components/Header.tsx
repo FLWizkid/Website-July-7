@@ -138,8 +138,12 @@ export default function Header() {
             <span>Try Free Demos</span>
           </a>
           <Link to="/contact" className="btn-primary text-xs lg:text-sm px-4 lg:px-6 min-h-[40px] lg:min-h-[44px] leading-tight text-center bg-emerald-500 text-slate-950 hover:bg-emerald-400 hover:shadow-lg hover:shadow-emerald-500/20">
-            <span>Contact Us or</span>
-            <span>Plan a Pilot</span>
+            <span className="flex flex-col items-center leading-tight whitespace-nowrap">
+              <span>Contact Us</span>
+              <span>Or</span>
+              <span>Plan a</span>
+              <span>Pilot</span>
+            </span>
             <ArrowRight size={16} />
           </Link>
         </div>
@@ -206,8 +210,12 @@ export default function Header() {
                 <span>Try Free Demos</span>
               </a>
               <Link to="/contact" className="btn-primary w-full justify-center min-h-[48px] leading-tight text-center bg-emerald-500 text-slate-950 hover:bg-emerald-400 hover:shadow-lg hover:shadow-emerald-500/20">
-                <span>Contact Us or</span>
-                <span>Plan a Pilot</span>
+                <span className="flex flex-col items-center leading-tight whitespace-nowrap">
+                  <span>Contact Us</span>
+                  <span>Or</span>
+                  <span>Plan a</span>
+                  <span>Pilot</span>
+                </span>
               </Link>
             </div>
           </nav>
