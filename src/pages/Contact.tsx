@@ -162,8 +162,8 @@ export default function Contact() {
                 <div className="w-9 h-9 rounded-xl bg-brand-gradient-soft flex items-center justify-center shrink-0">
                   <Mail size={16} className="text-brand-cyan" />
                 </div>
-                <div className="flex flex-col gap-1">
-                  <div className="flex items-center gap-2">
+                <div className="flex flex-col gap-1 w-full">
+                  <div className="flex items-center justify-between">
                     <a href="mailto:Doug@Encountive.com" className="hover:text-brand-cyan transition-colors text-sm">
                       Doug@Encountive.com
                     </a>
