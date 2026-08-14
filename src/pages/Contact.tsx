@@ -177,7 +177,7 @@ export default function Contact() {
                       <Linkedin size={14} />
                     </a>
                   </div>
-                  <span className="text-xs text-brand-muted whitespace-nowrap">Founder — Feedback and customer engagement</span>
+                  <span className="text-xs text-brand-muted whitespace-nowrap">Co-Founder — Feedback and customer engagement</span>
                 </div>
               </div>
               <div className="flex items-center gap-3 text-brand-ink">
@@ -203,7 +203,7 @@ export default function Contact() {
             </div>
             <div className="rounded-xl border border-white/10 p-4 bg-brand-surface/30">
               <p className="text-xs text-brand-muted leading-relaxed">
-                <strong className="text-brand-dim">Note:</strong> Do not include patient identifiers or confidential or proprietary information.
+                <strong className="text-brand-dim">Note:</strong> Do not include patient identifiers or confidential proprietary information.
               </p>
             </div>
           </div>
