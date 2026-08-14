@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import Section from "@/components/Section";
 import CtaBanner from "@/components/CtaBanner";
+import VideoPlayer from "@/components/VideoPlayer";
 
 const audiences = [
   {
@@ -226,15 +227,7 @@ export default function Home() {
           time, and delivers measurable outcomes your institution can defend — all with the rigor clinical teams demand.
         </p>
         <div className="max-w-3xl mx-auto">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl" style={{ aspectRatio: "16 / 9" }}>
-            <iframe
-              src="https://www.youtube.com/embed/aAeJr9tXrGg?rel=0"
-              title="Encountive demo"
-              className="absolute inset-0 w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          </div>
+          <VideoPlayer videoId="aAeJr9tXrGg" />
         </div>
       </Section>
 
