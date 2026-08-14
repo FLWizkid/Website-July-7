@@ -162,8 +162,8 @@ export default function Contact() {
                 <div className="w-9 h-9 rounded-xl bg-brand-gradient-soft flex items-center justify-center shrink-0">
                   <Mail size={16} className="text-brand-cyan" />
                 </div>
-                <div className="flex flex-col gap-1 w-full">
-                  <div className="flex items-center justify-between">
+                <div className="flex flex-col gap-1 w-fit">
+                  <div className="flex items-center justify-between gap-4">
                     <a href="mailto:Doug@Encountive.com" className="hover:text-brand-cyan transition-colors text-sm">
                       Doug@Encountive.com
                     </a>
@@ -177,7 +177,7 @@ export default function Contact() {
                       <Linkedin size={14} />
                     </a>
                   </div>
-                  <span className="text-xs text-brand-muted">Founder — Feedback and customer engagement</span>
+                  <span className="text-xs text-brand-muted whitespace-nowrap">Founder — Feedback and customer engagement</span>
                 </div>
               </div>
               <div className="flex items-center gap-3 text-brand-ink">
